@@ -1,0 +1,18 @@
+ .container.main{
+	height: 2em;
+}
+
+#delete{
+	display: inline;
+}
+.item{
+	display: inline-block;
+}
+
+h3 p {
+	color: white;
+}
+
+span p{
+	font-size: 20px;
+}

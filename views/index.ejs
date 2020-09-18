@@ -1,0 +1,46 @@
+<%- include ("./partials/header")%>
+
+
+
+<div class=" ui inverted container segment">
+	<div class="ui huge header">
+		<div class="ui top attached">
+			<div class="item">
+				<% findBlog.forEach(function(blog){ %>
+					<div class="ui medium rounded image">
+						<img src="<%= blog.image %>">
+					</div>
+					<div class="content ">
+						<h3>
+							<a href="/blog/<%= blog._id %>"><%= blog.title.toUpperCase() %></a> 
+						</h3>
+					</div>
+					<div class="description ">
+						<span>
+							<p><%= blog.content.substring(0,20) %>...</p>
+						</span>
+					</div>
+					<div class="extra content ">
+						<div class="meta right">
+							<span class="right floated"><%= blog.zone.toDateString() %></span>
+						</div>
+						<span>
+							<a class=" ui purple inverted button  " href="/blog/<%= blog._id %>">
+								See More</a>
+						</span>
+					</div>
+					<div class="ui horizontal divider">
+					</div>
+				<% }) %>
+			</div>	
+		</div>
+		
+	</div>
+</div>
+
+<%- include ("./partials/footer")%>
+
+
+
+
+
